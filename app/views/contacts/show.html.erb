@@ -1,0 +1,6 @@
+<h1><%= @company.name %> Contact: <%= @contact.full_name %></h1>
+
+<p>Position: <%= @contact.position%></p>
+<p>Email: <%= @contact.email%></p>
+
+<%= link_to "Back to #{@company.name}", company_path(@company) %>

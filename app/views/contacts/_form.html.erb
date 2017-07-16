@@ -1,0 +1,21 @@
+<h3>Create a Contact for <%= @company.name %></h3>
+<%= form_for @contact, html: {id: :form_id }  do |f| %>
+  <p>
+    <%= f.label :full_name, "Full Name" %><br/>
+    <%= f.text_area :full_name %>
+  </p>
+  <p>
+    <%= f.label :position, "Position" %><br/>
+    <%= f.text_area :position %>
+  </p>
+  <p>
+    <%= f.label :email, "Email" %><br/>
+    <%= f.text_area :email %>
+  </p>
+
+  <%= hidden_field_tag :company_id, @company.id %>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
